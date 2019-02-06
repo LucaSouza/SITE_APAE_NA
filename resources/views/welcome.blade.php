@@ -1,99 +1,85 @@
 <!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="pt-br">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>APAE DE NOVA ANDRADINA - MS</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
+        <link href="{{ mix('/css/material.min.css') }}" rel="stylesheet">
+        <link href="{{ mix('/css/style.css') }}" rel="stylesheet">
 
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
 
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
     </head>
+
     <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
+      <header>
+        <section class="cd-slider">
+          <ul>
+            <li data-color="#FF384B">
+              <div class="content" style="background-image:url({{asset('img/01.jpg')}})">
+                <blockquote>
+                  <p>APAE DE NOVA ANDRADINA.</p>
+                  <span>apae de nova andradina</span>
+                </blockquote>
+              </div>
+            </li>
+            <li data-color="#FF9C00">
+              <div class="content" style="background-image:url({{asset('img/02.jpg')}})">
+                <blockquote>
+                  <p>APAE DE NOVA ANDRADINA.</p>
+                  <span>apae de nova andradina</span>
+                </blockquote>
+              </div>
+            </li>
+            <li data-color="#002AFF">
+              <div class="content" style="background-image:url({{asset('img/03.jpg')}})">
+                <blockquote>
+                  <p>APAE DE NOVA ANDRADINA.</p>
+                  <span>apae de nova andradina</span>
+                </blockquote>
+              </div>
+            </li>
+            <li data-color="#002AFF">
+              <div class="content" style="background-image:url({{asset('img/04.jpg')}})">
+                <blockquote>
+                  <p>APAE DE NOVA ANDRADINA.</p>
+                  <span>apae de nova andradina</span>
+                </blockquote>
+              </div>
+            </li>
+          </ul>
+          <nav>
+            <div><a class="prev" href="#"></a></div>
+            <div><a class="next" href="#"></a></div>
+          </nav>
+        </section>
+        <div class="mdl-grid container-superior-menu">
+          <div class="mdl-cell mdl-cell--8-col">
+            <span class="mdl-layout-title">
+              <a href="#">
+                <img src="{{asset('img/novaMarca.png')}}" alt="" id="logo">
+              </a>
+            </span>
+          </div>
 
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
+            <div class="mdl-cell mdl-cell--2-col doacao">
+              <a href="#">DOAÇÃO</a>
             </div>
+            <div class="mdl-cell mdl-cell--2-col voluntario">
+              <a href="#">SER VOLUNTÁRIO</a>
+            </div>
+
         </div>
+      </header>
+      <main>
+        <h1>titulo</h1>
+      </main>
     </body>
+    <script src="{{ mix('/js/jquery.min.js') }}"></script>
+    <script src="{{ mix('/js/material.min.js') }}"></script>
+    <script src="{{ mix('/js/js-slide-principal.js') }}"></script>
 </html>

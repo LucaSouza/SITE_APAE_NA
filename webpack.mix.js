@@ -13,3 +13,9 @@ const mix = require('laravel-mix');
 
 mix.js('resources/js/app.js', 'public/js')
    .sass('resources/sass/app.scss', 'public/css');
+
+mix.copy('node_modules/material-design-lite/material.min.css', 'public/css');
+mix.copy('node_modules/material-design-lite/material.min.js', 'public/js');
+mix.copy('resources/js/js-slide-principal.js', 'public/js');
+mix.copy('resources/css/style.css', 'public/css');
+mix.copy('node_modules/jquery/dist/jquery.min.js', 'public/js');
